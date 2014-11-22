@@ -1,0 +1,3 @@
+pickandgo_app:
+    resource: "@PickandgoAppBundle/Resources/config/routing.yml"
+    prefix:   /

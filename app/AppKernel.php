@@ -39,6 +39,7 @@ class AppKernel extends Kernel
         		new Sopinet\Bundle\BootstrapExtendBundle\SopinetBootstrapExtendBundle(),
         		new RaulFraile\Bundle\LadybugBundle\RaulFraileLadybugBundle(),
         		new Application\Sonata\UserBundle\ApplicationSonataUserBundle(),
+            new Pickandgo\AppBundle\PickandgoAppBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
