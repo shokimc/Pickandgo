@@ -22,12 +22,16 @@ $app['debug'] = true;
 
 // Cómo usar:
 // http://localhost/pickandgo/web/index.php/get_product/ndasion1
-$app->get('/get_product/{tag}', function ($tag) use ($app) {
-	$sql = "SELECT * FROM product WHERE tag = ?";
-	$product = $app['db']->fetchAll($sql, array($tag));
+//$app->get('/get_product/{tag}', function ($tag) use ($app) {
+$tag = "ndasion1";
+$tag = $argv[1];
+$sql = "SELECT * FROM product WHERE tag = ?";
+$product = $app['db']->fetchAll($sql, array($tag));
 
-    	return new Response(json_encode($product), 201);
-});
+echo $product[0]['price'];
+//    	return new Response(json_encode($product), 201);
+//});
 
+exit();
 $app->run();
 ?>
